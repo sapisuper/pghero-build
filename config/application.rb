@@ -29,6 +29,6 @@ module PgHeroSolo
       config.logger = ActiveSupport::TaggedLogging.new(logger)
     end
 
-    PgHero.show_migrations = false
+    PgHero.show_migrations = ENV["PGHERO_SHOW_MIGRATIONS"]
   end
 end
