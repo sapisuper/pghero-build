@@ -83,7 +83,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     pg (0.21.0)
     pg_query (1.2.0)
-    pghero (2.4.0)
+    pghero (2.4.1)
       activerecord (>= 5)
     puma (4.3.0)
       nio4r (~> 2.0)
@@ -149,4 +149,4 @@ RUBY VERSION
    ruby 2.6.3p62
 
 BUNDLED WITH
-   1.17.2
+   1.17.3
