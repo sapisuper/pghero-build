@@ -1,4 +1,4 @@
-FROM ruby:2.6.3-alpine3.9
+FROM ruby:2.6.5-alpine3.9
 
 MAINTAINER Andrew Kane <andrew@chartkick.com>
 
@@ -24,4 +24,4 @@ ENV PORT 8080
 
 EXPOSE 8080
 
-CMD puma -C config/puma.rb
+CMD puma -C /app/config/puma.rb
