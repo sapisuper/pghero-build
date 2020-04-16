@@ -1,6 +1,23 @@
 require "bundler/setup"
 Bundler.require
-require "rails/all"
+
+# silence Ruby 2.7 deprecation warnings
+# remove when Rails 6.0.3 released
+$VERBOSE = nil
+
+require "rails"
+
+%w(
+  active_record/railtie
+  action_controller/railtie
+  action_view/railtie
+  sprockets/railtie
+).each do |railtie|
+  begin
+    require railtie
+  rescue LoadError
+  end
+end
 
 unless ENV["DATABASE_URL"]
   if File.exist?(PgHero.config_path)
