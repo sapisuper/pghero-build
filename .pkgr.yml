@@ -30,6 +30,11 @@ targets:
       - libpq5
       - libxml2
       - libxslt1.1
+  centos-8:
+    dependencies:
+      - libxml2
+      - libxslt
+      - postgresql-libs
   centos-7:
     dependencies:
       - libxml2
