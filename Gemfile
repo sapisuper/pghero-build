@@ -12,5 +12,5 @@ gem "tzinfo-data"
 
 # system stats
 gem "aws-sdk-cloudwatch"
-gem "google-cloud-monitoring", "< 1"
+gem "google-cloud-monitoring-v3"
 gem "azure_mgmt_monitor"
