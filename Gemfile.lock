@@ -221,7 +221,7 @@ DEPENDENCIES
   activerecord-nulldb-adapter
   aws-sdk-cloudwatch
   azure_mgmt_monitor
-  google-cloud-monitoring
+  google-cloud-monitoring (< 1)
   pg (< 1)
   pg_query
   pghero
