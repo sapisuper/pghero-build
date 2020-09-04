@@ -30,6 +30,10 @@ end
 module PgHeroSolo
   class Application < Rails::Application
     routes.append do
+      # checks app is up, not databases healthy
+      # not protected by auth, so do not expose data
+      get "health", to: ->(env) { [200, {}, ["OK"]] }
+
       mount PgHero::Engine, at: "/"
     end
 
