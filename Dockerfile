@@ -4,7 +4,7 @@ MAINTAINER Andrew Kane <andrew@chartkick.com>
 
 RUN apk add --update ruby-dev build-base \
   libxml2-dev libxslt-dev pcre-dev libffi-dev \
-  postgresql-dev git
+  postgresql-dev git gcompat
 
 ENV INSTALL_PATH /app
 
