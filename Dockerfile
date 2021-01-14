@@ -12,6 +12,14 @@ RUN mkdir -p $INSTALL_PATH
 
 WORKDIR $INSTALL_PATH
 
+# https://github.com/grpc/grpc/issues/24116
+# install gems first for Docker caching
+RUN gem install -v 3.14.0 google-protobuf --platform ruby -- --with-cflags=-D__va_copy=va_copy
+RUN gem install -v 1.34.0 grpc --platform ruby -- --with-cflags=-D__va_copy=va_copy
+RUN bundle config --local build.google-protobuf --with-cflags=-D__va_copy=va_copy
+RUN bundle config --local build.grpc --with-cflags=-D__va_copy=va_copy
+RUN bundle config --local force_ruby_platform true
+
 COPY Gemfile Gemfile.lock ./
 
 RUN bundle install --binstubs
