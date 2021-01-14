@@ -15,11 +15,13 @@ WORKDIR $INSTALL_PATH
 # https://github.com/grpc/grpc/issues/24116
 # install gems first for Docker caching
 RUN gem install -v 3.14.0 google-protobuf --platform ruby -- --with-cflags=-D__va_copy=va_copy && \
-    rm -rf /usr/local/bundle/gems/google-protobuf-3.14.0/ext/google/protobuf_c
+    find /usr/local/bundle/gems/google-protobuf-3.14.0 -name "*.o" -type f -delete && \
+    find /usr/local/bundle/gems/google-protobuf-3.14.0/ext -name "*.a" -type f -delete && \
+    find /usr/local/bundle/gems/google-protobuf-3.14.0/ext -name "*.so" -type f -delete
 RUN gem install -v 1.34.0 grpc --platform ruby -- --with-cflags=-D__va_copy=va_copy && \
-    rm -rf /usr/local/bundle/gems/grpc-1.34.0/src/ruby/ext/grpc/libs && \
-    rm /usr/local/bundle/gems/grpc-1.34.0/src/ruby/ext/grpc/grpc_c.so && \
-    find /usr/local/bundle/gems/grpc-1.34.0 -name "*.o" -type f -delete
+    find /usr/local/bundle/gems/grpc-1.34.0 -name "*.o" -type f -delete && \
+    find /usr/local/bundle/gems/grpc-1.34.0/src/ruby/ext -name "*.a" -type f -delete && \
+    find /usr/local/bundle/gems/grpc-1.34.0/src/ruby/ext -name "*.so" -type f -delete
 RUN bundle config --local build.google-protobuf --with-cflags=-D__va_copy=va_copy
 RUN bundle config --local build.grpc --with-cflags=-D__va_copy=va_copy
 RUN bundle config --local force_ruby_platform true
