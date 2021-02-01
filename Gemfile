@@ -14,3 +14,7 @@ gem "tzinfo-data"
 gem "aws-sdk-cloudwatch"
 gem "google-cloud-monitoring-v3"
 gem "azure_mgmt_monitor"
+
+# grpc fix
+gem "google-protobuf", "3.14.0"
+gem "grpc", "1.34.0"
