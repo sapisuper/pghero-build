@@ -51,5 +51,6 @@ module PgHeroSolo
     end
 
     PgHero.show_migrations = ENV["PGHERO_SHOW_MIGRATIONS"]
+    PgHero.time_zone = ENV["PGHERO_TZ"] if ENV["PGHERO_TZ"]
   end
 end
