@@ -1,10 +1,10 @@
 source "https://rubygems.org"
 
-ruby "2.7.2"
+ruby "2.7.5"
 
 gem "rails", "~> 6.0.0"
 gem "pg", "< 1" # < 1 for Debian 7 and CentOS 6 builds
-gem "pghero", "2.8.1" #, git: "https://github.com/ankane/pghero.git"
+gem "pghero", "2.8.2" #, git: "https://github.com/ankane/pghero.git"
 gem "pg_query"
 gem "puma"
 gem "activerecord-nulldb-adapter", require: false
