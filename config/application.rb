@@ -1,10 +1,6 @@
 require "bundler/setup"
 Bundler.require
 
-# silence Ruby 2.7 deprecation warnings
-# remove when Rails 6.0.3 released
-$VERBOSE = nil
-
 require "rails"
 
 %w(
@@ -52,5 +48,8 @@ module PgHeroSolo
 
     PgHero.show_migrations = ENV["PGHERO_SHOW_MIGRATIONS"]
     PgHero.time_zone = ENV["PGHERO_TZ"] if ENV["PGHERO_TZ"]
+
+    # default logging is very verbose
+    Google::Apis.logger = Logger.new(nil)
   end
 end
