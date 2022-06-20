@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.7.6"
+ruby "3.1.2"
 
 gem "rails", "~> 6.0.0"
 gem "pg", "< 1" # < 1 for Debian 7 and CentOS 6 builds
