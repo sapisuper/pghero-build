@@ -24,7 +24,10 @@ targets:
     dependencies:
       - libxml2
       - libxslt
-      - postgresql-libs
+      - postgresql-devel
+    before:
+      - cp gemfiles/centos7.gemfile Gemfile
+      - cp gemfiles/centos7.gemfile.lock Gemfile.lock
   sles-12:
     dependencies:
       - libxml2
