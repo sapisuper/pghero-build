@@ -5,7 +5,7 @@ ruby "3.1.2"
 gem "rails", "~> 7.0.0"
 gem "sprockets-rails"
 gem "pg"
-gem "pghero", "3.0.0" # also update gemfiles/centos7.gemfile
+gem "pghero", "3.0.1" # also update gemfiles/centos7.gemfile
 gem "pg_query"
 gem "puma"
 gem "activerecord-nulldb-adapter", require: false
