@@ -18,6 +18,7 @@ RUN apk add --update build-base git libpq-dev && \
     bundle install && \
     bundle binstubs --all && \
     bundle exec rake assets:precompile && \
+    rm -rf tmp && \
     apk del build-base git && \
     rm -rf /var/cache/apk/*
 
