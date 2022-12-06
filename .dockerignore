@@ -1,6 +1,11 @@
-.git
-.dockerignore
-.byebug_history
-.vagrant
-/log/*
-/tmp/*
+/.git
+/.dockerignore
+/.vagrant
+/gemfiles
+/log/
+/tmp/
+/.pkgr.yml
+/app.json
+/Dockerfile
+/Procfile
+/Vagrantfile
