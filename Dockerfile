@@ -16,7 +16,7 @@ COPY . .
 RUN apk add --update build-base git libpq-dev && \
     gem install bundler && \
     bundle install && \
-    bundle exec rails app:update:bin && \
+    bundle binstubs --all && \
     bundle exec rake assets:precompile && \
     apk del build-base git && \
     rm -rf /var/cache/apk/*
