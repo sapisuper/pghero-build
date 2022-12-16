@@ -33,3 +33,6 @@ targets:
       - libxml2
       - libxslt
       - postgresql93
+    before:
+      - cp gemfiles/centos7.gemfile Gemfile
+      - cp gemfiles/centos7.gemfile.lock Gemfile.lock
