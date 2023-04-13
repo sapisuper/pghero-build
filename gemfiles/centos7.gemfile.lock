@@ -136,7 +136,7 @@ GEM
       concurrent-ruby (~> 1.0)
     jmespath (1.6.2)
     jwt (2.7.0)
-    loofah (2.19.1)
+    loofah (2.20.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.8.1)
@@ -170,15 +170,15 @@ GEM
       timeout
     net-smtp (0.3.3)
       net-protocol
-    nio4r (2.5.8)
-    nokogiri (1.14.2)
+    nio4r (2.5.9)
+    nokogiri (1.14.3)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     os (1.1.4)
     pg (0.21.0)
     pg_query (2.2.1)
       google-protobuf (>= 3.19.2)
-    pghero (3.3.1)
+    pghero (3.3.2)
       activerecord (>= 6)
     public_suffix (5.0.1)
     puma (6.1.1)
@@ -262,7 +262,7 @@ DEPENDENCIES
   google-apis-monitoring_v3
   pg (< 1)
   pg_query (~> 2)
-  pghero (= 3.3.1)
+  pghero (= 3.3.2)
   puma
   rails (~> 6.0.0)
   sprockets-rails
