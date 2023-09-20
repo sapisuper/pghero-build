@@ -13,7 +13,7 @@ WORKDIR $INSTALL_PATH
 
 COPY . .
 
-RUN apk add --update build-base git libpq-dev && \
+RUN apk add --update build-base gcompat git libpq-dev && \
     gem install bundler && \
     bundle install && \
     bundle binstubs --all && \

@@ -7,6 +7,7 @@ gem "sprockets-rails"
 gem "pg"
 gem "pghero", "3.3.4" # also update gemfiles/centos7.gemfile
 gem "pg_query", "~> 2"
+gem "google-protobuf", force_ruby_platform: true
 gem "puma"
 gem "activerecord-nulldb-adapter", require: false
 gem "tzinfo-data"
