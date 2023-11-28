@@ -5,7 +5,7 @@ ruby "3.1.4"
 gem "rails", "~> 7.0.0"
 gem "sprockets-rails"
 gem "pg"
-gem "pghero", "3.3.4" # also update gemfiles/centos7.gemfile
+gem "pghero", "3.4.0" # also update gemfiles/centos7.gemfile
 gem "pg_query", "~> 2"
 gem "google-protobuf", force_ruby_platform: true
 gem "puma"
@@ -16,3 +16,6 @@ gem "tzinfo-data"
 gem "aws-sdk-cloudwatch"
 gem "google-apis-monitoring_v3"
 gem "azure_mgmt_monitor"
+
+# TODO remove when updating Ruby
+gem "uri", ">= 0.12.2"

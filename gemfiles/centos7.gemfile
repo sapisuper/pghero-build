@@ -5,7 +5,7 @@ ruby "3.1.2"
 gem "rails", "~> 6.0.0"
 gem "sprockets-rails"
 gem "pg", "< 1"
-gem "pghero", "3.3.4"
+gem "pghero", "3.4.0"
 gem "pg_query", "~> 2"
 gem "puma"
 gem "activerecord-nulldb-adapter", require: false
@@ -15,3 +15,6 @@ gem "tzinfo-data"
 gem "aws-sdk-cloudwatch"
 gem "google-apis-monitoring_v3"
 gem "azure_mgmt_monitor"
+
+# TODO remove when updating Ruby
+gem "uri", ">= 0.12.2"
